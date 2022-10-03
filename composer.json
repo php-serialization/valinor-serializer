@@ -1,0 +1,37 @@
+{
+    "name": "php-serialization/valinor-serializer",
+    "description": "A serializer implementation built on top of cuyz/valinor.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PhpSerialization\\ValinorSerializer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhpSerialization\\ValinorSerializer\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "v.zanfir",
+            "email": "vadimzanfir@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.1",
+        "php-serialization/serializer": "^0.3.0",
+        "cuyz/valinor": "^0.14.0"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.27",
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "psalm": "./vendor/bin/psalm --no-cache",
+        "test": "./vendor/bin/phpunit --do-not-cache",
+        "all": "./vendor/bin/phpunit --do-not-cache && ./vendor/bin/psalm --no-cache"
+    }
+}
